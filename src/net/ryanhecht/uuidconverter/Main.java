@@ -19,8 +19,9 @@ import org.bukkit.configuration.file.YamlConfiguration;
 import net.ryanhecht.MCPHotel.util.getUUID;
 
 public class Main {
-	//public static File dir = new File(Paths.get("").toAbsolutePath().toString());
+	//so da hell is the deal with file paths and different OS's? Is there a universal way to do this?
 	public static File dir = new File(Plugin.getPlugin(Plugin.class).getDataFolder().getPath()+"../../");
+	//                                                                                          ^^^^^^ $20 that breaks in Windows
 	public static File usermap = new File(dir, "\\plugins\\Essentials\\usermap.csv");
 	public static File euserdata = new File(dir, "\\plugins\\Essentials\\userdata");
 	public static File wuserdata = new File(dir, "\\world\\playerdata");
