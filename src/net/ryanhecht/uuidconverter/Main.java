@@ -20,7 +20,7 @@ import net.ryanhecht.MCPHotel.util.getUUID;
 
 public class Main {
 	//public static File dir = new File(Paths.get("").toAbsolutePath().toString());
-	public static File dir = new File("D:\\bukkitTestServer");
+	public static File dir = new File(Plugin.getPlugin(Plugin.class).getDataFolder().getPath());
 	public static File usermap = new File(dir, "\\plugins\\Essentials\\usermap.csv");
 	public static File euserdata = new File(dir, "\\plugins\\Essentials\\userdata");
 	public static File wuserdata = new File(dir, "\\world\\playerdata");
@@ -29,7 +29,7 @@ public class Main {
 	public static File NEWeuserdata = new File(dir, "\\plugins\\Essentials\\NEWuserdata");
 	public static File NEWwuserdata = new File(dir, "\\world\\NEWplayerdata");
 	
-	public static void main(String[] args) throws FileNotFoundException, IOException, InvalidConfigurationException {
+	public static void main() throws FileNotFoundException, IOException, InvalidConfigurationException {
 		System.out.println("Getting usermap data...");
 		HashMap<String,String> csvdata = getUsers(usermap);
 		HashMap<String,UUID> onlinedata = new HashMap<String,UUID>();
